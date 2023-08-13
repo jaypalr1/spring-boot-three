@@ -1,0 +1,6 @@
+spring:
+  application.name: Shutdown App
+  output.ansi.enabled: ALWAYS #Color coded logs
+  lifecycle.timeout-per-shutdown-phase: "20s"
+
+server.shutdown: graceful

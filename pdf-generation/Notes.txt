@@ -1,0 +1,2 @@
+PDF creation: https://www.baeldung.com/java-pdf-creation
+Exporting as PDF: https://www.codejava.net/frameworks/spring-boot/pdf-export-example

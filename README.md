@@ -50,3 +50,9 @@ SELECT * FROM IMAGE_MODEL;
 
 http://localhost:8080/image/download/image_name.format {Format should be specified else 404 will be
 thrown}
+
+## Lombok
+
+### Tutorial Link:
+
+[Link](https://www.sitepoint.com/beyond-pojos-ten-ways-reduce-boilerplate-lombok/)

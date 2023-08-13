@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<included>-->
+<!--  <conversionRule conversionWord="clr"-->
+<!--    converterClass="org.springframework.boot.logging.logback.ColorConverter"/>-->
+<!--  <conversionRule conversionWord="wex"-->
+<!--    converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter"/>-->
+<!--  <conversionRule conversionWord="wEx"-->
+<!--    converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter"/>-->
+
+<!--  <property name="CONSOLE_LOG_PATTERN"-->
+<!--    value="${CONSOLE_LOG_PATTERN:-%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd'T'HH:mm:ss.SSSXXX}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(-&#45;&#45;){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>-->
+<!--  <property name="CONSOLE_LOG_CHARSET" value="${CONSOLE_LOG_CHARSET:-${file.encoding:-UTF-8}}"/>-->
+<!--  <property name="FILE_LOG_PATTERN"-->
+<!--    value="${FILE_LOG_PATTERN:-%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd'T'HH:mm:ss.SSSXXX}} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } -&#45;&#45; [%t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>-->
+<!--  <property name="FILE_LOG_CHARSET" value="${FILE_LOG_CHARSET:-${file.encoding:-UTF-8}}"/>-->
+
+<!--  <logger level="INFO" name="org.apache.catalina.startup.DigesterFactory"/>-->
+<!--  <logger level="INFO" name="org.apache.catalina.util.LifecycleBase"/>-->
+<!--  <logger level="INFO" name="org.apache.coyote.http11.Http11NioProtocol"/>-->
+<!--  <logger level="INFO" name="org.apache.sshd.common.util.SecurityUtils"/>-->
+
+<!--  <logger level="INFO" name="org.apache.tomcat.util.net.NioSelectorPool"/>-->
+<!--  <logger level="INFO" name="org.eclipse.jetty.util.component.AbstractLifeCycle"/>-->
+<!--  <logger level="INFO" name="org.hibernate.validator.internal.util.Version"/>-->
+<!--  <logger level="INFO" name="org.springframework.boot.actuate.endpoint.jmx"/>-->
+
+<!--  <log loggingLevel="INFO" logName="org.apache.camel.util.CamelLogger" message="MESSAGE"/>-->
+<!--</included>-->
+
+<configuration>
+  <property name="console-pattern"
+    value="%d{yyyy-MMM-dd HH:mm:ss.SSS} %highlight(%-5level) %-5relative --- [%20thread] %cyan(%logger{36}) - %msg%n"/>
+
+  <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>${console-pattern}</pattern>
+    </encoder>
+  </appender>
+
+  <root level="INFO">
+    <appender-ref ref="console"/>
+  </root>
+</configuration>

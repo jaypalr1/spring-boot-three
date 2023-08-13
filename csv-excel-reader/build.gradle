@@ -1,0 +1,4 @@
+dependencies {
+    implementation 'net.sf.supercsv:super-csv:2.4.0'
+    implementation 'org.apache.poi:poi-ooxml:5.2.2'
+}

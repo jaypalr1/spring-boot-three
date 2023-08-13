@@ -1,0 +1,4 @@
+spring:
+  application.name: PDF Generator
+  main.banner-mode: off
+  jpa.open-in-view: false
