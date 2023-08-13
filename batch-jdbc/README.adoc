@@ -1,0 +1,14 @@
+# Batch processing imp params:
+
+* Job:
+- A job is a set of rules that define the batch process.
+
+* Steps:
+- Steps define the execution flow.
+There can be multiple steps or single step.
+
+* JobLauncher:
+- It is used for launching a Job.
+
+* JobRepository:
+- It stores all the jobs, their states and all other Job related metadata.

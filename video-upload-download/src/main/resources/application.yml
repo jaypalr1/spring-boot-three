@@ -1,0 +1,19 @@
+spring:
+  h2.console.enabled: true
+  datasource.url: jdbc:h2:mem:testdb
+  main.banner_mode: 'off'
+  output.ansi.enabled: ALWAYS
+  lifecycle.timeout-per-shutdown-phase: "20s"
+  servlet:
+    multipart.max-file-size: 50MB
+    multipart.max-request-size: 50MB
+  jpa:
+    open-in-view: false
+    properties.jakarta:
+      persistence:
+        sharedCache.mode: ALL
+
+server:
+  port: 8888
+  error.include-message: always
+  shutdown: graceful

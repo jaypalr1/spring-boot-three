@@ -1,0 +1,9 @@
+spring:
+  application.name: video-stream-app
+  main.banner_mode: 'off'
+  output.ansi.enabled: ALWAYS
+  lifecycle.timeout-per-shutdown-phase: "20s"
+
+server.shutdown: graceful
+
+video.path: "classpath:videos/%s"

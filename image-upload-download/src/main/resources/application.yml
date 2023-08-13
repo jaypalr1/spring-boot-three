@@ -1,0 +1,22 @@
+spring:
+  application.name: image-app
+  main.banner_mode: 'off'
+  output.ansi.enabled: ALWAYS
+  lifecycle.timeout-per-shutdown-phase: "20s"
+  servlet.multipart:
+    max-file-size: 2MB
+    max-request-size: 2MB
+  h2.console.enabled: true
+  datasource:
+    url: jdbc:h2:~/test
+    username: sa
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate.ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+    properties.jakarta:
+      persistence:
+        sharedCache.mode: ALL #Caching: ALL, NONE, ENABLE_SELECTIVE, DISABLE_SELECTIVE and UNSPECIFIED
+
+server.shutdown: graceful

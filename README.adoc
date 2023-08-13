@@ -1,0 +1,26 @@
+= Table of Contents:
+:toc:
+
+== Batch
+
+https://docs.spring.io/spring-batch/docs/current/reference/html/index.html}[Official Doc]
+
+https://stackoverflow.com/questions/55381505/preparedstatementcallback-bad-sql-grammar-select-job-instance-id-job-name-fro}[Issue 1]
+
+https://stackoverflow.com/questions/47085330/prevent-spring-batch-automatic-job-trigger-after-context-creation-without-spring)[Issue 2]
+
+https://stackoverflow.com/questions/48424367/allowing-core-thread-timeout-with-scheduledthreadpoolexecutor)[Issue 3]
+
+== ImageUploadDownload
+
+== MultipartRequestAndRequestBody
+
+image::multipart-request-and-request-body/src/main/resources/Postman.jpg[]
+
+== ScriptExecutionFromJava
+
+== SendMail
+
+== VideoStream
+
+== VideoUploadDownload

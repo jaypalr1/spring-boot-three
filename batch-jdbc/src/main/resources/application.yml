@@ -1,0 +1,21 @@
+server:
+  port: 8081
+  shutdown: graceful
+
+spring:
+  application.name: BatchApp
+  main.banner_mode: 'off'
+  output.ansi.enabled: ALWAYS
+  lifecycle.timeout-per-shutdown-phase: "20s"
+#  h2.console.enabled: true
+#  datasource:
+#    url: jdbc:h2:~/test
+#    username: sa
+#    driver-class-name: org.h2.Driver
+#  jpa:
+#    hibernate.ddl-auto: update
+#    database-platform: org.hibernate.dialect.H2Dialect
+#    open-in-view: false
+#    properties.jakarta:
+#      persistence:
+#        sharedCache.mode: ALL #Caching: ALL, NONE, ENABLE_SELECTIVE, DISABLE_SELECTIVE and UNSPECIFIED

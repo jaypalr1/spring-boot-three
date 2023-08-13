@@ -1,0 +1,4 @@
+dependencies {
+    implementation 'de.sciss:sphinx4-data:1.0.0'
+    implementation 'net.sf.phat:sphinx4-core:5prealpha'
+}

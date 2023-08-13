@@ -1,0 +1,14 @@
+rootProject.name = 'spring-boot-three'
+
+include 'aop',
+        'batch-jdbc',
+        'batch-jpa',
+        'exe-app',
+        'image-upload-download',
+        'multipart-request-and-request-body',
+        'reflection',
+        'script-execution-from-java',
+        'send-mail',
+        'video-stream',
+        'video-upload-download',
+        'voice-command'

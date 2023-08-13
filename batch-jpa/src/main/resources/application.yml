@@ -1,0 +1,31 @@
+server:
+  port: 8081
+  shutdown: graceful
+
+spring:
+  application.name: BatchApp
+  batch:
+    jdbc.initialize-schema: always
+    job.enabled: false #Stops job from executing automatically at the startup.
+  main.banner_mode: 'off'
+  output.ansi.enabled: ALWAYS
+  lifecycle.timeout-per-shutdown-phase: "20s"
+  h2.console.enabled: true
+  datasource:
+    #    url: jdbc:h2:mem:AZ
+    #    username: sa
+    #    driver-class-name: org.h2.Driver
+    url: jdbc:postgresql://localhost:26257/batchdb
+    username: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: false
+    open-in-view: false
+    hibernate.ddl-auto: update
+    #    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#    properties:
+#      hibernate.dialect: org.hibernate.dialect.PostgreSQL95Dialect
+#      jakarta:
+#        persistence:
+#          sharedCache.mode: ALL #Caching: ALL, NONE, ENABLE_SELECTIVE, DISABLE_SELECTIVE and UNSPECIFIED
