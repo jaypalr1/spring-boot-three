@@ -1,5 +1,5 @@
 configurations {
-    runtime.exclude group: 'org.springframework.boot', module: ':spring-boot-starter-tomcat'
+    runtime.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
 }
 
 dependencies {
