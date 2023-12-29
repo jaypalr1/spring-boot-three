@@ -1,0 +1,26 @@
+/*
+plugins {
+    id "com.github.bjornvester.xjc" version "1.8.2"
+}
+
+dependencies {
+//    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.1'
+    implementation 'javax.xml.bind:jaxb-api:2.3.0'
+}
+
+xjc {
+    xjcVersion.set("2.3.8")
+
+    // Make use of Jakarta or Javax
+    useJakarta.set(false)
+
+    // Default generated doc
+    markGenerated.set(true)
+
+    //  An extended binding file that specifies how the schema types are associated with the generated Java classes.
+    generateEpisode.set(false)
+
+    // XSD Dir
+    xsdDir.dir("src/main/resources/schema")
+}
+*/

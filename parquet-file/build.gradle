@@ -1,0 +1,15 @@
+dependencies {
+    // Avro
+    //implementation 'org.apache.parquet:parquet-avro:1.13.1'
+    implementation 'org.apache.spark:spark-core_2.13:3.4.1'
+
+    // JSON. Need above dependencies as well.
+    //implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+
+    implementation 'org.apache.commons:commons-io:1.3.2'
+    implementation 'org.json:json:20180813'
+    implementation 'org.apache.parquet:parquet-avro:1.10.1'
+    implementation 'org.apache.parquet:parquet-column:1.10.1'
+    implementation 'org.apache.parquet:parquet-hadoop:1.10.1'
+    implementation 'com.google.code.gson:gson:2.10.1'
+}

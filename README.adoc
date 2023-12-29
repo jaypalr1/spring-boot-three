@@ -1,8 +1,17 @@
 = Table of Contents:
 :toc:
 
+== AOP
+// .AOP - Custom title instead of 'Details'
+[%collapsible]
+====
+====
+
 == Batch
 
+.JDBC
+[%collapsible]
+====
 https://docs.spring.io/spring-batch/docs/current/reference/html/index.html}[Official Doc]
 
 https://stackoverflow.com/questions/55381505/preparedstatementcallback-bad-sql-grammar-select-job-instance-id-job-name-fro}[Issue 1]
@@ -10,17 +19,145 @@ https://stackoverflow.com/questions/55381505/preparedstatementcallback-bad-sql-g
 https://stackoverflow.com/questions/47085330/prevent-spring-batch-automatic-job-trigger-after-context-creation-without-spring)[Issue 2]
 
 https://stackoverflow.com/questions/48424367/allowing-core-thread-timeout-with-scheduledthreadpoolexecutor)[Issue 3]
+====
 
-== ImageUploadDownload
+.JPA
+[%collapsible]
+====
+====
 
-== MultipartRequestAndRequestBody
+== CSV Excel file reader
 
+[%collapsible]
+====
+====
+
+== Dynamic JSON request
+
+[%collapsible]
+====
+====
+
+== EXE App
+
+[%collapsible]
+====
+====
+
+== Filters & Interceptors
+
+[%collapsible]
+====
+====
+
+== Graceful Shutdown
+
+.Camel
+[%collapsible]
+====
+====
+
+.Spring
+[%collapsible]
+====
+====
+
+== Image Upload & Download
+
+[%collapsible]
+====
+====
+
+== Lombok
+
+[%collapsible]
+====
+====
+
+== Multipart request & Request body
+
+[%collapsible]
+====
 image::multipart-request-and-request-body/src/main/resources/Postman.jpg[]
+====
 
-== ScriptExecutionFromJava
+== Parquet File
 
-== SendMail
+[%collapsible]
+====
+====
 
-== VideoStream
+== PDF Generation
 
-== VideoUploadDownload
+[%collapsible]
+====
+====
+
+== POJO to XSD
+
+[%collapsible]
+====
+====
+
+== Reflection
+
+[%collapsible]
+====
+====
+
+== Scheduler
+
+[%collapsible]
+====
+====
+
+== Script Execution from Java
+
+[%collapsible]
+====
+====
+
+== Send Mail
+
+[%collapsible]
+====
+====
+
+== Video Stream
+
+[%collapsible]
+====
+====
+
+== Video Upload & Download
+
+[%collapsible]
+====
+====
+
+== Voice Command
+
+[%collapsible]
+====
+====
+
+== XSD to POJO
+
+.JAXB
+[%collapsible]
+====
+- https://github.com/IntershopCommunicationsAG/jaxb-gradle-plugin[GitHub]
+- Easy to implement.
+====
+
+.XJC
+[%collapsible]
+====
+- https://github.com/bjornvester/xjc-gradle-plugin[GitHub]
+- Gives more control.
+====
+
+== ADOC Notes
+
+[source,code]
+Can paste any code here. Looks good.
