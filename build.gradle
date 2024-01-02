@@ -34,11 +34,15 @@ allprojects {
         // Swagger
         implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
 
+        // Utility
+        implementation 'commons-io:commons-io:2.15.1'
+        implementation 'com.google.guava:guava:33.0.0-jre'
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
-        implementation 'org.apache.commons:commons-lang3:3.12.0'
+        testAnnotationProcessor 'org.projectlombok:lombok'
         annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
+        // Test
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
     }
 
@@ -51,6 +55,20 @@ allprojects {
 
     tasks.named('test') {
         useJUnitPlatform()
+
+        afterTest { desc, result ->
+            logger.quiet "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
+        }
+
+        afterSuite { desc, result ->
+            if (!desc.parent) {
+                println "\nTest result: ${result.resultType}"
+                println "Test summary: ${result.testCount} tests, " +
+                        "${result.successfulTestCount} succeeded, " +
+                        "${result.failedTestCount} failed, " +
+                        "${result.skippedTestCount} skipped"
+            }
+        }
     }
 }
 

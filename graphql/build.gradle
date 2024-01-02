@@ -1,0 +1,4 @@
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-graphql'
+    //	implementation 'com.graphql-java-kickstart:playground-spring-boot-starter:11.1.0'
+}
