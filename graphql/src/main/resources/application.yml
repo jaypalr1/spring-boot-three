@@ -1,1 +1,6 @@
-spring.graphql.graphiql.enabled: true
+spring:
+  application.name: graphql-app
+  graphql:
+    graphiql.enabled: true
+    #    path: "/graphql"
+    schema.locations: "classpath:graphql/**"

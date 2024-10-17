@@ -1,6 +1,6 @@
-# Controller schema from here
 extend type Query {
-    bookById(id: ID): Book
+    getBookData(id: ID): Book     # ! - means not null
+#    bookById(id: ID!): [Book]    # Returns a list
 }
 
 type Book {

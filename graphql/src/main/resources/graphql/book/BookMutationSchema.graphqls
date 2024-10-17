@@ -1,0 +1,9 @@
+extend type Mutation {
+    postBookData(bookInput : BookInput) : String
+}
+
+input BookInput {
+    id: ID
+    description: String
+    language: String
+}

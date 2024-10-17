@@ -38,7 +38,7 @@ public class Demo {
 
   @Bean
   public Job demoJob() {
-    return new JobBuilder("demoJob", jobRepository)
+    return new JobBuilder("demoJob")
         .preventRestart()
         .incrementer(new RunIdIncrementer())
         .listener(personJobListener)
@@ -48,8 +48,8 @@ public class Demo {
   }
 
   public Step stepsDemo() {
-    return new StepBuilder("stepsDemo", jobRepository)
-        .<PersonDto, PersonEntity>chunk(500, platformTransactionManager)
+    return new StepBuilder("stepsDemo")
+        .<PersonDto, PersonEntity>chunk(500)
 //        .allowStartIfComplete(true)
         .reader(reader())
         .processor(personProcessor)

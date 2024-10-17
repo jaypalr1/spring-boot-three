@@ -1,12 +1,12 @@
-package com.jay.csv;
+package com.jay;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//@SpringBootApplication
-public class CsvApp {
+@SpringBootApplication
+public class BoxApp {
 
   public static void main(String[] args) {
-    SpringApplication.run(CsvApp.class, args);
+    SpringApplication.run(BoxApp.class, args);
   }
 }

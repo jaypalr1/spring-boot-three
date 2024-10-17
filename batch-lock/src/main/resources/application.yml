@@ -1,0 +1,20 @@
+server:
+  port: 8082
+  shutdown: graceful
+
+spring:
+  application.name: Batch Lock App
+  h2.console.enabled: true
+  datasource:
+    url: jdbc:h2:mem:shedlock_DB
+#    url: jdbc:h2:mem:shedlock_DB;INIT=CREATE SCHEMA IF NOT EXISTS shedlock;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration

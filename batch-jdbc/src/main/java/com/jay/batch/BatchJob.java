@@ -36,13 +36,12 @@ public class BatchJob {
 
   private final PersonItemProcessor personItemProcessor;
   private final DataSource dataSource;
-  private final JobRepository jobRepository;
   private final JobCompletionNotificationListener jobCompletionNotificationListener;
   private final PlatformTransactionManager platformTransactionManager;
 
   @Bean
   public Job importUserJob() {
-    return new JobBuilder("importUserJob", jobRepository)
+    return new JobBuilder("importUserJob")
         .incrementer(new RunIdIncrementer())
         .listener(jobCompletionNotificationListener)
         .validator(new DefaultJobParametersValidator() {
@@ -52,7 +51,7 @@ public class BatchJob {
             log.info("Validating Job params.");
           }
         })
-        .start(new StepBuilder("taskletStep", jobRepository)
+        .start(new StepBuilder("taskletStep")
             .tasklet((stepContribution, chunkContext) -> {
               MethodInvokingTaskletAdapter methodInvokingTaskletAdapter = new MethodInvokingTaskletAdapter();
               methodInvokingTaskletAdapter.setTargetObject(personItemProcessor);
@@ -60,14 +59,14 @@ public class BatchJob {
               methodInvokingTaskletAdapter.setArguments(new String[]{"", ""});
 
               return RepeatStatus.FINISHED;
-            }, platformTransactionManager)
+            })
             .build()
         )
         .build();
   }
 
   public Step step() {
-    return new StepBuilder("step", jobRepository)
+    return new StepBuilder("step")
         .<Person, Person>chunk(10)
         .reader(reader())
         .processor(personItemProcessor)

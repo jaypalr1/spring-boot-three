@@ -1,4 +1,25 @@
+apply plugin: 'com.netflix.dgs.codegen'
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-graphql'
-    //	implementation 'com.graphql-java-kickstart:playground-spring-boot-starter:11.1.0'
+    implementation 'com.graphql-java:graphql-java-extended-scalars' // For adding extra scalar types
+
+    testImplementation 'org.springframework:spring-webflux'
+    testImplementation 'org.springframework.graphql:spring-graphql-test'
+}
+
+// Task for generating classes from GraphQl Schema files
+generateJava {
+    // List of directories containing schema files
+    schemaPaths = ["${projectDir}/src/main/resources/graphql"]
+
+    // The package name to use to generate sources
+    packageName = 'com.jay.generated'
+
+    // Enable generating the type safe query API
+    generateClient = true
+
+    // Version 2 of API
+    generateClientv2 = true
+
 }
